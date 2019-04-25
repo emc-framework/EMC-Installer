@@ -4,20 +4,15 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
-import java.util.Date;
-
 /**
  * Used to generate launcher profile json files for Minecraft 1.12.2 and below
  */
 public class LegacyJsonBuilder extends AbstractJsonBuilder {
 
-    public LegacyJsonBuilder(JsonObject emcJson) {
-        super(emcJson);
-    }
-
     @Override
     public JsonObject build(String mcVersion, String emcVersion, String id, String emcTweaker, String inheritsFrom) {
-        String date = formatDate(new Date());
+        // TODO: Generate date
+        String date = "2018-07-12T08:51:45-05:00";
         JsonObject jsonObject = new JsonObject();
         String tweaker = "--username ${auth_player_name} " +
                 "--version ${version_name} " +

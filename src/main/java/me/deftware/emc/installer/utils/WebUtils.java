@@ -14,7 +14,7 @@ public class WebUtils {
 	public static void download(String uri, String fileName) throws Exception {
 		URL url = new URL(uri);
 		HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-		connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36");
+		connection.setRequestProperty("User-Agent", "EMC Installer");
 		connection.setRequestMethod("GET");
 		FileOutputStream out = new FileOutputStream(fileName);
 		InputStream in = connection.getInputStream();
